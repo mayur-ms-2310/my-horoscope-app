@@ -1,0 +1,110 @@
+{
+  "Aries": [
+    { "horoscope": "A new idea will spark your creativity." },
+    { "horoscope": "You may reconnect with an old friend." },
+    { "horoscope": "Take time to rest and recharge." },
+    { "horoscope": "A surprise will brighten your day." },
+    { "horoscope": "Trust your instincts in a tricky situation." },
+    { "horoscope": "A meaningful conversation awaits." },
+    { "horoscope": "Your energy inspires others." }
+  ],
+  "Taurus": [
+    { "horoscope": "Patience will bring rewards." },
+    { "horoscope": "A financial opportunity may arise." },
+    { "horoscope": "Focus on your well-being." },
+    { "horoscope": "A friend seeks your advice." },
+    { "horoscope": "Take a break from routine." },
+    { "horoscope": "Focus on self-care today." },
+    { "horoscope": "New opportunities in finances." }
+  ],
+  "Gemini": [
+    { "horoscope": "Communication brings clarity." },
+    { "horoscope": "A short trip is on the horizon." },
+    { "horoscope": "Share your ideas with confidence." },
+    { "horoscope": "A learning opportunity appears." },
+    { "horoscope": "Stay open to new connections." },
+    { "horoscope": "Your curiosity leads to discovery." },
+    { "horoscope": "A friend brings good news." }
+  ],
+  "Cancer": [
+    { "horoscope": "Home brings comfort today." },
+    { "horoscope": "Express your feelings honestly." },
+    { "horoscope": "A family member needs your support." },
+    { "horoscope": "Nostalgia brings joy." },
+    { "horoscope": "Trust your intuition." },
+    { "horoscope": "A caring gesture is appreciated." },
+    { "horoscope": "Embrace a new routine." }
+  ],
+  "Leo": [
+    { "horoscope": "Your confidence shines bright." },
+    { "horoscope": "A creative project excites you." },
+    { "horoscope": "Recognition is coming your way." },
+    { "horoscope": "Share your talents with others." },
+    { "horoscope": "A bold move pays off." },
+    { "horoscope": "Take the lead in a group effort." },
+    { "horoscope": "Celebrate your achievements." }
+  ],
+  "Virgo": [
+    { "horoscope": "Organize your thoughts and plans." },
+    { "horoscope": "A detail needs your attention." },
+    { "horoscope": "Helping others brings satisfaction." },
+    { "horoscope": "A new routine benefits you." },
+    { "horoscope": "Stay flexible with changes." },
+    { "horoscope": "A practical solution appears." },
+    { "horoscope": "Your advice is valued." }
+  ],
+  "Libra": [
+    { "horoscope": "Balance work and play." },
+    { "horoscope": "A partnership grows stronger." },
+    { "horoscope": "Seek harmony in a disagreement." },
+    { "horoscope": "A social event brings joy." },
+    { "horoscope": "Listen to both sides." },
+    { "horoscope": "A compromise is reached." },
+    { "horoscope": "Share your perspective." }
+  ],
+  "Scorpio": [
+    { "horoscope": "A mystery intrigues you." },
+    { "horoscope": "Trust is earned today." },
+    { "horoscope": "A secret is revealed." },
+    { "horoscope": "Your determination pays off." },
+    { "horoscope": "Let go of old grudges." },
+    { "horoscope": "Transformation is possible." },
+    { "horoscope": "Embrace vulnerability." }
+  ],
+  "Sagittarius": [
+    { "horoscope": "Adventure calls your name." },
+    { "horoscope": "A new philosophy inspires you." },
+    { "horoscope": "Share your optimism." },
+    { "horoscope": "A journey brings insight." },
+    { "horoscope": "Expand your horizons." },
+    { "horoscope": "A learning experience awaits." },
+    { "horoscope": "Connect with distant friends." }
+  ],
+  "Capricorn": [
+    { "horoscope": "Hard work brings results." },
+    { "horoscope": "A goal is within reach." },
+    { "horoscope": "Take responsibility for your actions." },
+    { "horoscope": "A mentor offers guidance." },
+    { "horoscope": "Stay focused on priorities." },
+    { "horoscope": "A new project begins." },
+    { "horoscope": "Celebrate a milestone." }
+  ],
+  "Aquarius": [
+    { "horoscope": "Innovation leads to progress." },
+    { "horoscope": "A group effort succeeds." },
+    { "horoscope": "Share your vision." },
+    { "horoscope": "A friend surprises you." },
+    { "horoscope": "Embrace your uniqueness." },
+    { "horoscope": "A new idea takes shape." },
+    { "horoscope": "Support a worthy cause." }
+  ],
+  "Pisces": [
+    { "horoscope": "Dreams offer guidance." },
+    { "horoscope": "A creative outlet soothes you." },
+    { "horoscope": "Listen to your intuition." },
+    { "horoscope": "A friend needs your empathy." },
+    { "horoscope": "Let go of unrealistic fears." },
+    { "horoscope": "Compassion brings healing." },
+    { "horoscope": "A peaceful moment awaits." }
+  ]
+}
