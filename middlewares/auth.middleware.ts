@@ -1,9 +1,9 @@
 import jwt from 'jsonwebtoken'
 import crypto from 'node:crypto'
 import { getUserByEmail } from '../controllers/user.controller';
-import { Request, Response } from 'express';
+import { NextFunction, Request, Response } from 'express';
 
-export const tokenVerification = (req : Request | any ,res : Response,next : Function)=>{
+export const tokenVerification = (req : Request | any ,res : Response,next : NextFunction)=>{
     const authHeader = req.headers["authorization"];
     if (!authHeader) {
         return res.status(401).json({ error: "Authorization bearer token is missing" });
@@ -34,7 +34,7 @@ export const passwordVerification = async (req : Request | any ,res : Response,n
 
     let token = jwt.sign({ userId : getUserEmail?.id, email : user.email, zodiac : getUserEmail?.zodiacSign },'SECRET',{ expiresIn: '1h' })
     
-    res.status(200).send({message : `user logged In successfuly with token: ${token}`});
+    res.status(200).send({message : `user logged In successfuly `, token : token});
 
     next()
 

@@ -11,6 +11,7 @@ const userSignupSchema = Joi.object({
       'string.max': 'Name can be at most 50 characters',
     }),
   email: Joi.string()
+    .email({ tlds: { allow: false } })
     .pattern(/@/)
     .required()
     .messages({
