@@ -3,8 +3,11 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node dist/index.js",
+    "build": "tsc",
+    "dev": "nodemon --exec ts-node index.ts",
+    "migration": "cross-env NODE_OPTIONS=\"-r ts-node/register\" npx sequelize-cli db:migrate"
   },
   "keywords": [],
   "author": "",
@@ -19,6 +22,7 @@
     "nodemon": "^3.1.10",
     "pg": "^8.16.3",
     "pg-hstore": "^2.3.4",
+    "reflect-metadata": "^0.2.2",
     "sequelize": "^6.37.7",
     "swagger-jsdoc": "^6.2.8",
     "swagger-ui-express": "^5.0.1",
