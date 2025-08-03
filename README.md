@@ -50,38 +50,22 @@ A Node.js , Express.js backend application that provides daily horoscope service
 - PostgreSQL (if running locally)
 - Docker & Docker Compose (for containerized setup)
 
-## Environment Variables
-
-Create a `.env` file in the root directory:
-
-```env
-# Database Configuration
-DB_HOST=localhost          # Use 'db' for Docker setup
-DB_PORT=5432
-DB_USER=postgres
-DB_PASS=password
-DB_NAME=horoscope
-
-# Application
-PORT=8080
-NODE_ENV=development
-```
-
 ## Installation & Setup
 
 ### Option 1: Docker Setup (Recommended)
 
-1. **Clone the repository**
+1. **Clone and install dependencies**
 
    ```bash
    git clone <repository-url>
-   cd my-backend-app
+   cd my-horoscope-app
+   npm install
    ```
 
 2. **Start with Docker Compose**
 
    ```bash
-   docker-compose up --build
+   docker compose build && docker compose up -d
    ```
 
    This will:
@@ -91,9 +75,9 @@ NODE_ENV=development
    - Run database migrations automatically
    - Set up all required dependencies
 
-3. **Verify the setup**
+3. **Check the API documentation**
    ```bash
-   curl http://localhost:8080/api-docs
+   http://localhost:8080/api-docs
    ```
 
 ### Option 2: Local Development Setup
@@ -102,7 +86,7 @@ NODE_ENV=development
 
    ```bash
    git clone <repository-url>
-   cd my-backend-app
+   cd my-horoscope-app
    npm install
    ```
 
@@ -111,6 +95,19 @@ NODE_ENV=development
    - Install PostgreSQL locally
    - Create a database named `horoscope`
    - Update `.env` file with your database credentials
+
+   ```env
+    #Database Configuration:
+      DB_HOST=localhost          # Use 'db' for Docker setup
+      DB_PORT=5432
+      DB_USER=postgres
+      DB_PASS=password
+      DB_NAME=horoscope
+
+    #Application:
+      PORT=8080
+      NODE_ENV=development
+   ```
 
 3. **Run database migrations**
 
@@ -122,7 +119,7 @@ NODE_ENV=development
 
    ```bash
    npm run build
-   npm start
+   npm run start
    ```
 
    For development with auto-reload:
@@ -178,7 +175,8 @@ Content-Type: application/json
 
 ```json
 {
-  "message": "user logged In successfuly with token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
+  "message": "user logged In successfully",
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
 }
 ```
 
@@ -266,36 +264,6 @@ The horoscope endpoints are rate-limited to **5 requests per minute** per IP add
 - **Password**: Minimum 6 characters, required
 - **Birthdate**: DD/MM/YYYY format, required
 
-### Authentication
-
-- Passwords are hashed using PBKDF2 with salt
-- JWT tokens expire after 1 hour
-- Invalid tokens return 401 Unauthorized
-
-## Development Commands
-
-```bash
-# Install dependencies
-npm install
-
-# Development mode with auto-reload
-npm run dev
-
-# Build TypeScript to JavaScript
-npm run build
-
-# Start production server
-npm start
-
-# Run database migrations
-npm run migration
-
-# Docker commands
-docker-compose up --build     # Build and start all services
-docker-compose down           # Stop all services
-docker-compose logs app       # View application logs
-```
-
 ## Database Schema
 
 ### Users Table
@@ -358,19 +326,6 @@ The application automatically calculates zodiac signs based on birthdates:
    - Wait 1 minute between requests if rate limited
    - Consider implementing user-based rate limiting for production
 
-### Logs and Debugging
-
-```bash
-# View application logs (Docker)
-docker-compose logs -f app
-
-# View database logs (Docker)
-docker-compose logs -f db
-
-# Check container status
-docker-compose ps
-```
-
 ## Design Decisions
 
 ### Architecture Choices
@@ -398,23 +353,12 @@ docker-compose ps
 - **Current**: 12 zodiac-based horoscopes per day, simple file storage
 - **Personalized**: Unique horoscope per user per day, requires significant architecture changes
 
-### Key Changes Needed
+### What can be implemented
 
 1. **New Database Table**: Create `personalized_horoscopes` table to store unique horoscope for each user per day
 
-2. **Background Job System**: Use queue (Redis/RabbitMQ) to generate horoscopes overnight instead of real-time generation
+2. **Background Job System**: Generate horoscopes overnight instead of real-time generation
 
 3. **Caching Layer**: Add Redis to cache generated horoscopes and reduce database queries
 
 4. **Horizontal Scaling**: Use load balancer with multiple app instances to handle increased user traffic
-
-### Implementation Strategy
-
-```javascript
-async function generatePersonalizedHoroscope(userId, date) {
-  // 1. Get user profile and preferences
-  // 2. Call AI/ML service for content generation
-  // 3. Cache and store result
-  // 4. Return personalized content
-}
-```
