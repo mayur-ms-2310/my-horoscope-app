@@ -362,3 +362,7 @@ The application automatically calculates zodiac signs based on birthdates:
 3. **Caching Layer**: Add Redis to cache generated horoscopes and reduce database queries
 
 4. **Horizontal Scaling**: Use load balancer with multiple app instances to handle increased user traffic
+
+
+### Al tool used
+ * GitHub Copilot
