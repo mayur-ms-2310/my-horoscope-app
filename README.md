@@ -45,7 +45,7 @@ A Node.js , Express.js backend application that provides daily horoscope service
 
 ## Prerequisites
 
-- Node.js (v20 or higher)
+- Node.js (v22 or higher)
 - npm
 - PostgreSQL (if running locally)
 - Docker & Docker Compose (for containerized setup)
